@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sidebar 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+            </div>
+            <h1><a href="index.html" class="logo">Welcome</a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li>
+                    <a href="index.html"><span class="fa fa-home mr-3"></span> Acceuil</a>
+                </li>
+                <li>
+                    <a href="materiel.html"><span class="fa fa-toolbox mr-3"></span>Matériel</a>
+                </li>
+                <li>
+                    <a href="personnels.html"><span class="fas fa-user-friends mr-3"></span>Les personnels
+            </a>
+                </li>
+
+                <li class="active">
+                    <a href="affectations.html"><span class="fas fa-user-plus mr-3"></span>les affectations</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fas fa-cog mr-3"></span>Settings</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="mb-4">les affectations</h2>
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Nouvelle Affectation</button>
+
+            <table class="table table-hover ">
+                <thead class="">
+                    <tr>
+                        <th class="bg-primary" scope="col">#</th>
+                        <th class="bg-light" scope="col">Nom</th>
+                        <th class="text-white bg-secondary" scope="col">Matériel Categorie</th>
+                        <th class="text-white bg-secondary" scope="col">Matériel Type</th>
+                        <th class="text-white bg-secondary" scope="col">Matériel Marque</th>
+                        <th class="text-white bg-secondary" scope="col">N° Série</th>
+                        <th class="bg-success text-white" scope="col">Date Affectation</th>
+                        <th class="bg-danger text-white" scope="col">Date fin Affectation</th>
+                        <th class="bg-warning" scope="col">Notes <i class="fas fa-clipboard"></i></th>
+                        <th class="bg-light" d scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="border">Ahmed <i class="fas fa-search"></i></td>
+                        <td class="border">Reseau</td>
+                        <td class="border">Serveur</td>
+                        <td class="border">Cisco</td>
+                        <td class="border">12399 <i class="fas fa-search"></i></td>
+                        <td class="border">12/12/20</td>
+                        <td class="border">12/12/21</td>
+                        <td class="border">Note here</td>
+                        <td><a class="" title="print" data-toggle="modal"><i class="fas fa-print mr-3 fa-2x"></i></a>
+                            <a class="" title="fin Affectation" data-toggle="modal" data-target="#affectationModal"><i class="fas fa-calendar-times fa-2x"></i></a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="width: 55em; border-radius: 20px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle Affectation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div style="margin-left: 35px;" class="form-group">
+
+                            <label class="col-form-label">Nom:</label>
+                            <select class="css-input" id="" name="">
+                                <option value="neuf">ahmed</option>
+                                <option value="bon">amine</option>
+                            </select>
+                            <div id="arow"><i class="fas fa-arrows-alt-v fa-4x"></i></div>
+                            <label class="col-form-label">Matériel Categorie:</label>
+                            <select class="css-input" id="" name="">
+                                <option value="">Reseau</option>
+                                <option value="">serveur</option>
+                            </select>
+                            <label class="col-form-label">Matériel Type:</label>
+                            <select class="css-input" id="" name="">
+                                <option value="neuf">Ordinateur</option>
+                                <option value="bon">Impriment</option>
+                            </select>
+                            <label class="col-form-label">Matériel Marque:</label>
+                            <select class="css-input" id="" name="">
+                                <option value="neuf">Ordinateur</option>
+                                <option value="bon">Impriment</option>
+                            </select>
+                            <label class="col-form-label">N° Série</label>
+                            <select class="css-input" id="" name="">
+                                <option value="neuf">12839</option>
+                            </select>
+
+                            <label class="">Date Affectation:</label>
+                            <input type="date" class="css-input" id=""></input>
+
+
+                            <label class="">Note:</label>
+                            <textarea class="css-input" style="height: 10em;" id=""></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
+                    <button type="button" class="btn btn-primary">Ajouter l'affectation</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  fin Affectation popup -->
+    <div class="modal fade" id="affectationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="width: 55em; border-radius: 20px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Fin Affectation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div style="margin-left: 35px;" class="form-group">
+
+
+
+                            <label class="">Date De Fin Affectation:</label>
+                            <input type="date" class="css-input" id=""></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
+                    <button type="button" class="btn btn-primary">Fin</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

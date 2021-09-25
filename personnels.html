@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sidebar 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+            </div>
+            <h1><a href="index.html" class="logo">Welcome</a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li>
+                    <a href="index.html"><span class="fa fa-home mr-3"></span> Acceuil</a>
+                </li>
+                <li>
+                    <a href="materiel.html"><span class="fa fa-toolbox mr-3"></span>Matériel</a>
+                </li>
+                <li class="active">
+                    <a href="personnels.html"><span class="fas fa-user-friends mr-3"></span>Les personnels
+            </a>
+                </li>
+
+                <li>
+                    <a href="affectations.html"><span class="fas fa-user-plus mr-3"></span>les affectations</a>
+                </li>
+                <li>
+                    <a href="#"><span class="fas fa-cog mr-3"></span>Settings</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="mb-4">Les Personnels</h2>
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Nouvelle Personne</button>
+
+            <table class="table table-hover ">
+                <thead class="">
+                    <tr>
+                        <th class="bg-primary" scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prénom</th>
+                        <th scope="col">Fonction</th>
+                        <th scope="col">Division</th>
+                        <th scope="col">Service</th>
+                        <th class="bg-warning" scope="col">Notes <i class="fas fa-clipboard"></i></th>
+                        <th class="bg-danger text-white" d scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Test</td>
+                        <td class="border">DSF</td>
+                        <td class="border">12399</td>
+                        <td class="border">Note here</td>
+                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
+                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Test</td>
+                        <td class="border">DSF</td>
+                        <td class="border">12399</td>
+                        <td class="border">Note here</td>
+                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
+                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Test</td>
+                        <td class="border">DSF</td>
+                        <td class="border">12399</td>
+                        <td class="border">Note here</td>
+                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
+                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Ahmed</td>
+                        <td class="border">Test</td>
+                        <td class="border">DSF</td>
+                        <td class="border">12399</td>
+                        <td class="border">Note here</td>
+                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
+                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="width: 55em; border-radius: 20px;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle Personne</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div style="margin-left: 35px;" class="form-group">
+
+                            <label class="">Nom:</label>
+                            <input class="css-input" placeholder="Nom" id=""></input>
+                            <label class="">Prénom:</label>
+                            <input class="css-input" placeholder="Prénom" id=""></input>
+                            <label class="">Fonction:</label>
+                            <input class="css-input" id="" placeholder="Fonction"></input>
+                            <label class="col-form-label">Division:</label>
+                            <select class="css-input" id="" name="">
+                                <option value="neuf">DRACS</option>
+                                <option value="bon">DRACS</option>
+                            </select>
+                            <label class="col-form-label">Service:</label>
+                            <select class="css-input" id="" name="">
+                                <option value="neuf">Salle</option>
+                                <option value="bon">Salle</option>
+                            </select>
+
+                            <label class="">Note:</label>
+                            <textarea class="css-input" style="height: 10em;" id=""></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
+                    <button type="button" class="btn btn-primary">Ajouter le Personne</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
