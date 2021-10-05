@@ -40,6 +40,11 @@
     cursor: pointer;
 }
 
+#search {
+    border-radius: 4px;
+    border: solid 1px blue;
+}
+
 .btnnn:hover {
     background: #3cb0fd;
     background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
@@ -61,7 +66,7 @@
     color: #000000;
     border-style: solid;
     border-radius: 7px;
-    box-shadow: 0px 0px 5px rgba(0, 31, 255, .75);
+    box-shadow: 0px 0px 5px rgb(154 155 161 / 75%);
     display: flex;
     height: 3em;
     width: 45em;
@@ -86,6 +91,11 @@
 .forlab {
     position: relative;
     top: -22px;
+}
+
+.forlab2 {
+    width: 42em;
+    display: inline;
 }
 
 .forinp {

@@ -51,36 +51,37 @@
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
             <h2 class="mb-4">les affectations</h2>
-            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Nouvelle Affectation</button>
+            <label>Recherche Libre:</label>
+            <input type="search" id="search" name="search">
+            <label>Recherche Avancée:</label>
+            <input type="search" id="search" name="search">
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Ajouter</button>
 
             <table class="table table-hover ">
                 <thead class="">
                     <tr>
-                        <th class="bg-primary" scope="col">#</th>
-                        <th class="bg-light" scope="col">Nom</th>
-                        <th class="text-white bg-secondary" scope="col">Matériel Categorie</th>
-                        <th class="text-white bg-secondary" scope="col">Matériel Type</th>
-                        <th class="text-white bg-secondary" scope="col">Matériel Marque</th>
-                        <th class="text-white bg-secondary" scope="col">N° Série</th>
-                        <th class="bg-success text-white" scope="col">Date Affectation</th>
-                        <th class="bg-danger text-white" scope="col">Date fin Affectation</th>
-                        <th class="bg-warning" scope="col">Notes <i class="fas fa-clipboard"></i></th>
-                        <th class="bg-light" d scope="col">Action</th>
+
+                        <th class="bg-light" scope="col">Nom et Prénom</th>
+
+                        <th class="" scope="col">N° Série</th>
+                        <th class="" scope="col">Date Affectation</th>
+                        <th class="" scope="col">Date fin Affectation</th>
+                        <th class="" scope="col">Notes <i class="fas fa-clipboard"></i></th>
+                        <th class="bg-secondary" d scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td class="border">Ahmed <i class="fas fa-search"></i></td>
-                        <td class="border">Reseau</td>
-                        <td class="border">Serveur</td>
-                        <td class="border">Cisco</td>
-                        <td class="border">12399 <i class="fas fa-search"></i></td>
+
+                        <td class="border text-primary edit">Ahmed <i class="fas fa-search"></i></td>
+
+                        <td class="border text-primary edit">12399 <i class="fas fa-search"></i></td>
                         <td class="border">12/12/20</td>
                         <td class="border">12/12/21</td>
                         <td class="border">Note here</td>
-                        <td><a class="" title="print" data-toggle="modal"><i class="fas fa-print mr-3 fa-2x"></i></a>
-                            <a class="" title="fin Affectation" data-toggle="modal" data-target="#affectationModal"><i class="fas fa-calendar-times fa-2x"></i></a>
+                        <td><a class="edit" title="print" data-toggle="modal"><i class="fas fa-file-pdf mr-3 fa-2x"></i></a>
+                            <a class="edit" title="fin Affectation" data-toggle="modal" data-target="#affectationModal"><i class="fas fa-calendar-times fa-2x"></i></a>
+
                         </td>
 
                     </tr>
@@ -94,9 +95,9 @@
     <!-- popup -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width: 55em; border-radius: 20px;">
+            <div class="modal-content" style="width: 43em; border-radius: 20px;">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle Affectation</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Personnes</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -105,45 +106,49 @@
                     <form>
 
                         <div style="margin-left: 35px;" class="form-group">
-
-                            <label class="col-form-label">Nom:</label>
-                            <select class="css-input" id="" name="">
-                                <option value="neuf">ahmed</option>
-                                <option value="bon">amine</option>
+                            <label class="">Nom et Prénom:</label>
+                            <select style="width: 25em;margin-left: 2em" class="css-input forlab2" id="" name="">
+                                <option >nometprénom1</option>
+                                <option>nometprénom2</option>
                             </select>
-                            <div id="arow"><i class="fas fa-arrows-alt-v fa-4x"></i></div>
-                            <label class="col-form-label">Matériel Categorie:</label>
-                            <select class="css-input" id="" name="">
-                                <option value="">Reseau</option>
-                                <option value="">serveur</option>
+                            <label class="">Matériel Categorie:</label>
+                            <select style="width: 25em;margin-left: 0.4em" class="css-input forlab2" id="" name="">
+                                <option >categorie1</option>
+                                <option>categorie2</option>
                             </select>
-                            <label class="col-form-label">Matériel Type:</label>
-                            <select class="css-input" id="" name="">
-                                <option value="neuf">Ordinateur</option>
-                                <option value="bon">Impriment</option>
+                            <label class="">Matériel Type:</label>
+                            <select style="width: 25em;margin-left: 3em;" class="css-input forlab2" id="" name="">
+                                <option >Agent</option>
+                                <option>Chef Service</option>
+                                <option>Chef Division</option>
+                                <option>Autre</option>
                             </select>
-                            <label class="col-form-label">Matériel Marque:</label>
-                            <select class="css-input" id="" name="">
-                                <option value="neuf">Ordinateur</option>
-                                <option value="bon">Impriment</option>
+                            <label class="">Matériel Marque:</label>
+                            <select style="width: 25em;margin-left: 1.6em;" class="css-input forlab2" id="" name="">
+                                <option >Agent</option>
+                                <option>Chef Service</option>
+                                <option>Chef Division</option>
+                                <option>Autre</option>
                             </select>
-                            <label class="col-form-label">N° Série</label>
-                            <select class="css-input" id="" name="">
-                                <option value="neuf">12839</option>
+                            <label class="">N° Série:</label>
+                            <select style="width: 25em;margin-left: 6em;" class="css-input forlab2" id="" name="">
+                                <option >Agent</option>
+                                <option>Chef Service</option>
+                                <option>Chef Division</option>
+                                <option>Autre</option>
                             </select>
-
-                            <label class="">Date Affectation:</label>
-                            <input type="date" class="css-input" id=""></input>
+                            <label class="">Date fin Affectation:</label>
+                            <input style="width: 20em;margin-left: 10em;" type="date" class="css-input"></input>
 
 
                             <label class="">Note:</label>
-                            <textarea class="css-input" style="height: 10em;" id=""></textarea>
+                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id=""></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
-                    <button type="button" class="btn btn-primary">Ajouter l'affectation</button>
+                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </div>
@@ -171,7 +176,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
+                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annulé</button>
                     <button type="button" class="btn btn-primary">Fin</button>
                 </div>
             </div>

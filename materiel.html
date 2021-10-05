@@ -51,86 +51,46 @@
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
             <h2 class="mb-4">Matériel</h2>
-            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Nouvelle Matériel</button>
+            <label>Recherche Libre:</label>
+            <input type="search" id="search" name="search">
+            <label>Recherche Avancée:</label>
+            <input type="search" id="search" name="search">
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Ajouter</button>
 
             <table class="table table-hover ">
                 <thead class="">
                     <tr>
-                        <th class="bg-primary" scope="col">#</th>
+
                         <th scope="col">Categorie</th>
                         <th scope="col">Type</th>
                         <th scope="col">Marque</th>
                         <th scope="col">Modele</th>
                         <th scope="col">N° Série</th>
                         <th scope="col">Acquisition</th>
-                        <th scope="col">Numero</th>
+                        <th scope="col">N° Acq</th>
                         <th scope="col">Etat</th>
-                        <th class="bg-info text-white border" scope="col">Inventaire</th>
+                        <th scope="col">instock</th>
                         <th scope="col">Notes <i class="fas fa-clipboard"></i></th>
-                        <th class="bg-danger text-white" d scope="col">Action</th>
+                        <th class="bg-secondary text-white" d scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td class="border">PC</td>
-                        <td class="border">PC</td>
-                        <td class="border">HP</td>
-                        <td class="border">2009</td>
-                        <td class="border">12399</td>
-                        <td class="border">BC</td>
-                        <td class="border">88883</td>
-                        <td class="border">New</td>
-                        <td class="border">15</td>
-                        <td class="border"></td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
+
+                        <td class="border" contenteditable="true">PC</td>
+                        <td class="border" contenteditable="true">PC</td>
+                        <td class="border" contenteditable="true">HP</td>
+                        <td class="border" contenteditable="true">2009</td>
+                        <td class="border" contenteditable="true">12399</td>
+                        <td class="border" contenteditable="true">BC</td>
+                        <td class="border" contenteditable="true">88883</td>
+                        <td class="border" contenteditable="true">New</td>
+                        <td class="border" contenteditable="true">15</td>
+                        <td class="border" contenteditable="true"></td>
+                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-save fa-2x ml-3"></i></a>
+
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td class="border">PC</td>
-                        <td class="border">PC</td>
-                        <td class="border">HP</td>
-                        <td class="border">2009</td>
-                        <td class="border">12399</td>
-                        <td class="border">BC</td>
-                        <td class="border">88883</td>
-                        <td class="border">New</td>
-                        <td class="border bg-danger">0</td>
-                        <td class="border"></td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td class="border">PC</td>
-                        <td class="border">PC</td>
-                        <td class="border">HP</td>
-                        <td class="border">2009</td>
-                        <td class="border">12399</td>
-                        <td class="border">BC</td>
-                        <td class="border">88883</td>
-                        <td class="border">New</td>
-                        <td class="border bg-warning">4</td>
-                        <td class="border"></td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td class="border">PC</td>
-                        <td class="border">PC</td>
-                        <td class="border">HP</td>
-                        <td class="border">2009</td>
-                        <td class="border">12399</td>
-                        <td class="border">BC</td>
-                        <td class="border">88883</td>
-                        <td class="border">New</td>
-                        <td class="border">11</td>
-                        <td class="border"></td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
-                    </tr>
+
 
                 </tbody>
             </table>
@@ -141,9 +101,9 @@
     <!-- popup -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width: 55em; border-radius: 20px;">
+            <div class="modal-content" style="width: 43em; border-radius: 20px;">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle Matériel</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Matériel</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -170,31 +130,31 @@
                         </div>
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Modéle:</label>
-                            <input class="css-input" placeholder="Le Modéle" id=""></input>
+                            <input style="width: 28em;margin-left: 5em;" class="css-input forlab2" id=""></input>
                             <label class="">N° Série:</label>
-                            <input class="css-input" placeholder="Le Numéro de Série" id=""></input>
+                            <input style="width: 28em;margin-left: 5em;" class="css-input forlab2" id=""></input>
                             <label class="">Acquisition:</label>
-                            <input class="css-input" placeholder="l'acquisition" id=""></input>
-                            <label class="">Numéro:</label>
-                            <input class="css-input" id="" placeholder="Le Numéro"></input>
+                            <input style="width: 28em;margin-left: 3.4em;" class="css-input forlab2" id=""></input>
+                            <label class="">N° Acquisition:</label>
+                            <input style="width: 27.2em;margin-left: 2.2em;" class="css-input forlab2" id=""></input>
                             <label class="col-form-label">Etat:</label>
-                            <select class="css-input" id="" name="">
+                            <select style="width: 28em;margin-left: 7em;" class="css-input forlab2" id="" name="">
                                 <option value="neuf">Neuf</option>
                                 <option value="bon">Bon</option>
                                 <option value="moyen">Moyen</option>
                                 <option value="mauvais">Mauvais</option>
                                 <option value="panne">Panne</option>
                             </select>
-                            <label class="">Inventaire:</label>
-                            <input class="css-input" id="" placeholder="Le inventaire"></input>
+                            <label class="col-form-label">instock:</label>
+                            <input style="width: 28em;margin-left: 5.3em;" class="css-input forlab2" id=""></input>
                             <label class="">Note:</label>
-                            <textarea class="css-input" style="height: 10em;" id=""></textarea>
+                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id=""></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
-                    <button type="button" class="btn btn-primary">Ajouter le Matériel</button>
+                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </div>

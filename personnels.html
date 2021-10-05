@@ -36,7 +36,7 @@
                     <a href="materiel.html"><span class="fa fa-toolbox mr-3"></span>Matériel</a>
                 </li>
                 <li class="active">
-                    <a href="personnels.html"><span class="fas fa-user-friends mr-3"></span>Les personnels
+                    <a href="personnels.html"><span class="fas fa-user-friends mr-3"></span>Les Personnes
             </a>
                 </li>
 
@@ -50,67 +50,46 @@
         </nav>
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">Les Personnels</h2>
-            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Nouvelle Personne</button>
+            <h2 class="mb-4">Les Personnes</h2>
+            <label>Recherche Libre:</label>
+            <input type="search" id="search" name="search">
+            <label>Recherche Avancée:</label>
+            <input type="search" id="search" name="search">
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Ajouter</button>
 
             <table class="table table-hover ">
                 <thead class="">
                     <tr>
-                        <th class="bg-primary" scope="col">#</th>
+                        <!-- <th class="bg-primary" scope="col">#</th> -->
                         <th scope="col">Nom</th>
                         <th scope="col">Prénom</th>
                         <th scope="col">Fonction</th>
+                        <th scope="col">Structure</th>
                         <th scope="col">Division</th>
                         <th scope="col">Service</th>
-                        <th class="bg-warning" scope="col">Notes <i class="fas fa-clipboard"></i></th>
-                        <th class="bg-danger text-white" d scope="col">Action</th>
+                        <th scope="col">PPR</th>
+                        <th scope="col">NOTE</th>
+                        <th scope="col" class="bg-secondary"></th>
+
+                        <!-- <th class="bg-danger text-white" d scope="col">Action</th> -->
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">1</th>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Test</td>
-                        <td class="border">DSF</td>
-                        <td class="border">12399</td>
-                        <td class="border">Note here</td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
+                        <!-- <th scope="row">1</th> -->
+                        <td class="border" contenteditable="true">Ahmed</td>
+                        <td class="border" contenteditable="true">Ahmed</td>
+                        <td class="border" contenteditable="true">Test</td>
+                        <td class="border" contenteditable="true">dddd</td>
+                        <td class="border" contenteditable="true">DSF</td>
+                        <td class="border" contenteditable="true">12399</td>
+                        <td class="border" contenteditable="true">sss</td>
+                        <td class="border" contenteditable="true">Note here</td>
+                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-save fa-2x ml-3"></i></a>
+                            <!-- <a class="delete" title="Delete" data-toggle="modal"></a> -->
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Test</td>
-                        <td class="border">DSF</td>
-                        <td class="border">12399</td>
-                        <td class="border">Note here</td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Test</td>
-                        <td class="border">DSF</td>
-                        <td class="border">12399</td>
-                        <td class="border">Note here</td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Ahmed</td>
-                        <td class="border">Test</td>
-                        <td class="border">DSF</td>
-                        <td class="border">12399</td>
-                        <td class="border">Note here</td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-wrench mr-3"></i></a>
-                            <a class="delete" title="Delete" data-toggle="modal"><i class=" fas fa-trash-alt"></i></a></td>
-                    </tr>
+
 
                 </tbody>
             </table>
@@ -121,9 +100,9 @@
     <!-- popup -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width: 55em; border-radius: 20px;">
+            <div class="modal-content" style="width: 43em; border-radius: 20px;">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Nouvelle Personne</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Personnes</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -132,32 +111,40 @@
                     <form>
 
                         <div style="margin-left: 35px;" class="form-group">
-
                             <label class="">Nom:</label>
-                            <input class="css-input" placeholder="Nom" id=""></input>
+                            <input style="width: 28em;margin-left: 4.8em;" class="css-input forlab2" id=""></input>
                             <label class="">Prénom:</label>
-                            <input class="css-input" placeholder="Prénom" id=""></input>
+                            <input style="width: 28em;margin-left: 3.3em;" class="css-input forlab2" id=""></input>
                             <label class="">Fonction:</label>
-                            <input class="css-input" id="" placeholder="Fonction"></input>
-                            <label class="col-form-label">Division:</label>
-                            <select class="css-input" id="" name="">
-                                <option value="neuf">DRACS</option>
-                                <option value="bon">DRACS</option>
+                            <select style="width: 28em;margin-left: 3em;" class="css-input forlab2" id="" name="">
+                                <option value="neuf">Agent</option>
+                                <option value="bon">Chef Service</option>
+                                <option value="bon">Chef Division</option>
+                                <option value="bon">Autre</option>
+                            </select>
+                            <label class="">Structure:</label>
+                            <input style="width: 28.2em;margin-left: 2.6em;" class="css-input forlab2" id=""></input>
+                            <label class="">Division:</label>
+                            <select style="width: 29em;margin-left: 3.4em;" class="css-input forlab2" id="" name="">
+                                <option value="neuf">division1</option>
+                                <option value="bon">division2</option>
                             </select>
                             <label class="col-form-label">Service:</label>
-                            <select class="css-input" id="" name="">
-                                <option value="neuf">Salle</option>
-                                <option value="bon">Salle</option>
+                            <select style="width: 29em;margin-left: 3.4em;" class="css-input forlab2" id="" name="">
+                                <option value="neuf">service1</option>
+                                <option value="bon">service2</option>
                             </select>
+                            <label class="">PPR:</label>
+                            <input style="width: 29.1em;margin-left: 5.2em;" class="css-input forlab2" id=""></input>
 
                             <label class="">Note:</label>
-                            <textarea class="css-input" style="height: 10em;" id=""></textarea>
+                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id=""></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger te" data-dismiss="modal">Annulé</button>
-                    <button type="button" class="btn btn-primary">Ajouter le Personne</button>
+                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </div>
