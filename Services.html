@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sidebar 04</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="custom-menu">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+            </div>
+            <h1><a href="index.html" class="logo">Welcome</a></h1>
+            <ul class="list-unstyled components mb-5">
+                <li>
+                    <a href="index.html"><span class="fa fa-home mr-3"></span> Acceuil</a>
+                </li>
+                <li>
+                    <a href="materiel.html"><span class="fa fa-toolbox mr-3"></span>Matériel</a>
+                </li>
+                <li>
+                    <a href="personnels.html"><span class="fas fa-user-friends mr-3"></span>Les personnels
+            </a>
+                </li>
+
+                <li>
+                    <a href="affectations.html"><span class="fas fa-user-plus mr-3"></span>les affectations</a>
+                </li>
+                <div class="dropdown">
+                    <button style="width: 15.6em;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Settings
+                        </button>
+                    <div style="width: 15em;" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="divisions.html">Divisions</a>
+                        <a class="dropdown-item" href="services.html">Services</a>
+                        <a class="dropdown-item" href="marques.html">Marques</a>
+                        <a class="dropdown-item" href="categories.html">Catégories</a>
+                        <a class="dropdown-item" href="types.html">Types</a>
+                    </div>
+                </div>
+            </ul>
+        </nav>
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+            <h2 class="mb-4">Services</h2>
+
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#affectationModal"><i class="fas fa-plus"></i> Ajouter</button>
+
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Division</th>
+                        <th>Service</th>
+
+                        <th>Action</th>
+                    </tr>
+                </tbody>
+                <tbody id="tbody">
+                    <tr>
+
+                        <td class="odd">DRACS</td>
+                        <td class="odd">service1</td>
+                        <td class="odd">
+                            <a class="edit" title="delete" data-toggle="modal"><i id="delbtn" class="fas fa-trash-alt fa-1x ml-3"></i></a>
+                            <a class="edit" title="edit" data-toggle="modal"><i  class="fas fas fa-edit fa-1x ml-3"></i></a>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--  popup -->
+    <div class="modal fade" id="affectationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="width: 37em; border-radius: 20px;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+                        <div style="margin-left: 35px;" class="form-group">
+                            <label class="">Divisions:</label>
+                            <select style="width: 23em;margin-left: 3.4em; border: 1px solid red" class="css-input forlab2" id="divisioninp">
+                                <option class="active" value="div1">division1</option>
+                                <option value="div2">division2</option>
+                            </select>
+                            <label class="">Service:</label>
+                            <input style="width: 23em;margin-left: 4.8em;" class="css-input forlab2" id="service"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary" id="ajouter">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const divisioninp = document.querySelector("#divisioninp");
+        const service = document.querySelector("#service");
+        const ajouter = document.querySelector("#ajouter");
+        const tbody = document.querySelector("#tbody");
+        const delbtn = document.querySelector("#delbtn");
+
+        divisioninp.forEach(item => {
+            item.addEventListener("click", (eo) => {
+                console.log("ddddd");
+                // if (item.classList.contains("active")) {
+                //     console.log("object");
+                // }
+                // allnumber.forEach((eo) => {
+                //     console.log(eo);
+                //     eo.classList.remove("active-num")
+                // });
+
+            })
+        })
+
+        // divisioninp.addEventListener("click", (eo) => {
+
+        //     console.log(eo.innerText);
+
+        // });
+
+
+        // console.log(divisioninp.innerText);
+        // add divesion after click
+        ajouter.addEventListener("click", (eo) => {
+            const body = document.querySelector("#body");
+            // insert in top
+            tbody.insertRow(0).innerHTML +=
+                `<tr>
+                        <td class="odd" contenteditable="true">${divisioninp.value}</td>
+                        <td class="odd" contenteditable="true">${service.value}</td>
+                        <td class="odd">
+                            <a class="edit"  data-toggle="modal"><i id="delbtn" class="fas fa-trash-alt fa-1x ml-3"></i></a>
+                            <a class="edit"  data-toggle="modal"><i  class="fas fas fa-save fa-1x ml-3"></i></a>
+                            </td>
+                            </tr>`
+                // tbody.prepend(eo.target.parentNode);
+
+            ajouter.setAttribute("data-dismiss", "modal");
+            service.value = ""
+
+        });
+        // remove diveion
+        tbody.addEventListener("click", (eo) => {
+            if (eo.target.id == ("delbtn")) {
+                eo.target.parentNode.parentNode.parentNode.remove();
+            }
+
+        })
+    </script>
+
+
+    <!-- ============== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

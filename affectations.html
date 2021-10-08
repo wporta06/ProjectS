@@ -43,9 +43,21 @@
                 <li class="active">
                     <a href="affectations.html"><span class="fas fa-user-plus mr-3"></span>les affectations</a>
                 </li>
-                <li>
-                    <a href="#"><span class="fas fa-cog mr-3"></span>Settings</a>
-                </li>
+
+
+                <div class="dropdown">
+                    <button style="width: 15.6em;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Settings
+                        </button>
+                    <div style="width: 15em;" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="divisions.html">Divisions</a>
+                        <a class="dropdown-item" href="services.html">Services</a>
+                        <a class="dropdown-item" href="marques.html">Marques</a>
+                        <a class="dropdown-item" href="categories.html">Catégories</a>
+                        <a class="dropdown-item" href="types.html">Types</a>
+                    </div>
+                </div>
+
             </ul>
         </nav>
         <!-- Page Content  -->
@@ -79,8 +91,8 @@
                         <td class="border">12/12/20</td>
                         <td class="border">12/12/21</td>
                         <td class="border">Note here</td>
-                        <td><a class="edit" title="print" data-toggle="modal"><i class="fas fa-file-pdf mr-3 fa-2x"></i></a>
-                            <a class="edit" title="fin Affectation" data-toggle="modal" data-target="#affectationModal"><i class="fas fa-calendar-times fa-2x"></i></a>
+                        <td class="text-center"><a class="edit" title="print" data-toggle="modal"><i class="fas fa-file-pdf fa-2x mr-1"></i></a>
+                            <a class="edit" title="fin Affectation" data-toggle="modal" data-target="#affectationModal"><i class="fas fa-window-close fa-2x"></i></a>
 
                         </td>
 
@@ -176,7 +188,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annulé</button>
+                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
                     <button type="button" class="btn btn-primary">Fin</button>
                 </div>
             </div>
