@@ -92,24 +92,24 @@
           </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="add-post-form">
 
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Divisions:</label>
-                            <input type="text" class="css-input" required id="divisioninp"></input>
+                            <input type="text" class="css-input" id="divisioninp"></input>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-primary" id="ajouter">Ajouter</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary" id="ajouter">Ajouter</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ============== -->
-    <script>
+    <!-- <script>
         const divisioninp = document.querySelector("#divisioninp");
         const ajouter = document.querySelector("#ajouter");
         const tbody = document.querySelector("#tbody");
@@ -136,13 +136,13 @@
 
         });
         // remove diveion
-        tbody.addEventListener("click", (eo) => {
+        tbody.addEventListener("submit", (eo) => {
             if (eo.target.id == ("delbtn")) {
                 eo.target.parentNode.parentNode.parentNode.remove();
             }
 
         })
-    </script>
+    </script> -->
     <script src="js/fetch/divisionsfetch.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
