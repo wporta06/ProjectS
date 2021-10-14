@@ -83,28 +83,13 @@
                         <!-- <th class="bg-danger text-white" d scope="col">Action</th> -->
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <!-- <th scope="row">1</th> -->
-                        <td class="border" contenteditable="true">Ahmed</td>
-                        <td class="border" contenteditable="true">Ahmed</td>
-                        <td class="border" contenteditable="true">Test</td>
-                        <td class="border" contenteditable="true">dddd</td>
-                        <td class="border" contenteditable="true">DSF</td>
-                        <td class="border" contenteditable="true">12399</td>
-                        <td class="border" contenteditable="true">sss</td>
-                        <td class="border" contenteditable="true">Note here</td>
-                        <td><a class="edit" title="Edit" data-toggle="modal"><i  class="fas fa-save fa-2x ml-3"></i></a>
-                            <!-- <a class="delete" title="Delete" data-toggle="modal"></a> -->
-                        </td>
-                    </tr>
-
-
+                <tbody class="uertbody">
+                    <!-- API here -->
                 </tbody>
             </table>
+
         </div>
     </div>
-
 
     <!-- popup -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -117,49 +102,50 @@
               </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="add-user-form">
 
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Nom:</label>
-                            <input style="width: 28em;margin-left: 4.8em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28em;margin-left: 4.8em;" class="css-input forlab2" id="nom"></input>
                             <label class="">Prénom:</label>
-                            <input style="width: 28em;margin-left: 3.3em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28em;margin-left: 3.3em;" class="css-input forlab2" id="prenom"></input>
                             <label class="">Fonction:</label>
-                            <select style="width: 28em;margin-left: 3em;" class="css-input forlab2" id="" name="">
-                                <option value="neuf">Agent</option>
-                                <option value="bon">Chef Service</option>
-                                <option value="bon">Chef Division</option>
-                                <option value="bon">Autre</option>
+                            <select style="width: 28em;margin-left: 3em;" class="css-input forlab2" id="fonction" name="">
+                                <option value="Agent">Agent</option>
+                                <option value="Chef Service">Chef Service</option>
+                                <option value="Chef Division">Chef Division</option>
+                                <option value="Autre">Autre</option>
                             </select>
                             <label class="">Structure:</label>
-                            <input style="width: 28.2em;margin-left: 2.6em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28.2em;margin-left: 2.6em;" class="css-input forlab2" id="structure"></input>
                             <label class="">Division:</label>
-                            <select style="width: 29em;margin-left: 3.4em;" class="css-input forlab2" id="" name="">
-                                <option value="neuf">division1</option>
-                                <option value="bon">division2</option>
+                            <select style="width: 29em;margin-left: 3.4em;" class="css-input forlab2" id="division" name="">
+                                <option value="division1">division1</option>
+                                <option value="division2">division2</option>
                             </select>
                             <label class="col-form-label">Service:</label>
-                            <select style="width: 29em;margin-left: 3.4em;" class="css-input forlab2" id="" name="">
-                                <option value="neuf">service1</option>
-                                <option value="bon">service2</option>
+                            <select style="width: 29em;margin-left: 3.4em;" class="css-input forlab2" id="service" name="">
+                                <option value="service1">service1</option>
+                                <option value="service2">service2</option>
                             </select>
                             <label class="">PPR:</label>
-                            <input style="width: 29.1em;margin-left: 5.2em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 29.1em;margin-left: 5.2em;" class="css-input forlab2" id="ppr"></input>
 
                             <label class="">Note:</label>
-                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id=""></textarea>
+                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id="note"></textarea>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                            </div>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ============== -->
+    <script src="js/fetch/userfetch.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
