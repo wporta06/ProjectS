@@ -1,24 +1,108 @@
-console.log("zadza");
-const marquestbody = document.querySelector('.marquestbody');
+const divisionstbody = document.querySelector('.divisionstbody');
+const addpostform = document.querySelector('.add-post-form');
+const divisioninp = document.getElementById('divisioninp');
+// const del = document.getElementById('del');
+
 let output = '';
+let url = 'http://localhost/stgapi/marque'
 
-fetch("http://localhost/stgapi/marque")
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-        data.forEach(datar => {
-            output +=
+const renderPosts = (posts) => {
+    console.log(posts);
+    posts.forEach(datar => {
+        output +=
 
-                ` <tr>
-
-                <td class="odd" contenteditable="true">${datar.marque}</td>
+            `<tr data-id="${datar.id}">
+                <td " class="odd" id="savee" contenteditable="true">${datar.marque}</td>
                 <td class="odd">
-                    <a class="edit" title="delete" data-toggle="modal"><i id="delbtn" class="fas fa-trash-alt fa-1x ml-3"></i></a>
-                    <a class="edit" title="edit" data-toggle="modal"><i  class="fas fas fa-save fa-1x ml-3"></i></a>
-
+                    <button class="btn btn-danger" type="submit" id="delete-row">delete</button>
+                    <button class="btn btn-success" type="submit" id="edit-row">save</button>
                 </td>
             </tr>`
 
-        });
-        marquestbody.innerHTML = output;
-    })
+    });
+    divisionstbody.innerHTML = output;
+}
+
+fetch(url)
+    .then(res => res.json())
+    .then(data => renderPosts(data))
+
+
+// create new divetion
+addpostform.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log("clicked");
+    console.log(divisioninp.value);
+
+    fetch(url + "/add", {
+            method: 'POST',
+            header: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                marque: divisioninp.value,
+            })
+        })
+        .then(res => res.json())
+        .then(data => {
+            const dataArr = [];
+            dataArr.push(data);
+            renderPosts(dataArr);
+        })
+        .then(() => location.reload());
+})
+
+
+// delete divesion
+
+divisionstbody.addEventListener('click', (e) => {
+    // console.log(e.target.id);
+    e.preventDefault();
+    let delBtnIsPressed = e.target.id == "delete-row";
+    let editBtnIsPressed = e.target.id == "edit-row";
+
+    let id = e.target.parentElement.parentElement.dataset.id;
+    if (delBtnIsPressed) {
+        fetch(url + "/delete/" + id, {
+
+            method: 'POST',
+            headers: {
+
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(() => location.reload());
+    }
+});
+
+// update
+
+divisionstbody.addEventListener('click', (e) => {
+    e.preventDefault();
+    let editBtnIsPressed = e.target.id == "edit-row";
+
+    let id = e.target.parentElement.parentElement.dataset.id;
+    let valuee = e.target.parentElement.parentElement.firstElementChild.innerText;
+    // console.log(valuee);
+    if (editBtnIsPressed) {
+        // console.log(valuee);
+        // console.log("updated");
+        fetch(url + "/Update/" + id, {
+                method: 'POST',
+                header: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    marque: valuee,
+                })
+            })
+            .then(res => res.json())
+            .then(data => {
+                const dataArr = [];
+                dataArr.push(data);
+                renderPosts(dataArr);
+            })
+            .then(() => location.reload());
+    }
+
+})

@@ -72,7 +72,7 @@
                         <th>Action</th>
                     </tr>
                 </tbody>
-                <tbody id="tbody" class="servicetbody">
+                <tbody id="tbody" class="divisionstbody">
                     <!-- API here -->
                 </tbody>
             </table>
@@ -89,28 +89,28 @@
           </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="add-post-form">
 
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Divisions:</label>
-                            <select style="width: 23em;margin-left: 3.4em; border: 1px solid red" class="css-input forlab2" id="divisioninp">
-                                <option class="active" value="div1">division1</option>
-                                <option value="div2">division2</option>
+                            <select style="width: 23em;margin-left: 3.4em; border: 1px solid red" class="css-input forlab2" id="locality-dropdown" name="locality">
+                            <!-- dropdown from APi -->
                             </select>
+
                             <label class="">Service:</label>
-                            <input style="width: 23em;margin-left: 4.8em;" class="css-input forlab2" id="service"></input>
+                            <input style="width: 23em;margin-left: 4.8em;" class="css-input forlab2" required id="service"></input>
                         </div>
+                        <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                        <button type="submit" class="btn btn-primary" id="ajouter">Ajouter</button>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary" id="ajouter">Ajouter</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         const divisioninp = document.querySelector("#divisioninp");
         const service = document.querySelector("#service");
         const ajouter = document.querySelector("#ajouter");
@@ -165,7 +165,7 @@
             }
 
         })
-    </script>
+    </script> -->
 
 
     <!-- ============== -->

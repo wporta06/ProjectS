@@ -71,7 +71,7 @@
                         <th>Action</th>
                     </tr>
                 </tbody>
-                <tbody id="tbody" class="marquestbody">
+                <tbody id="tbody" class="divisionstbody">
                     <!-- API HERE -->
 
                 </tbody>
@@ -90,24 +90,24 @@
           </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="add-post-form">
 
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Marque:</label>
-                            <input type="text" class="css-input" id="marqueinp"></input>
+                            <input type="text" class="css-input" id="divisioninp"></input>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-primary" id="ajouter">Ajouter</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary" id="ajouter">Ajouter</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ============== -->
-    <script>
+    <!-- <script>
         const marqueinp = document.querySelector("#marqueinp");
         const ajouter = document.querySelector("#ajouter");
         const tbody = document.querySelector("#tbody");
@@ -138,7 +138,7 @@
             }
 
         })
-    </script>
+    </script> -->
     <script src="js/fetch/marquesfetch.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>

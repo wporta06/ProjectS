@@ -1,23 +1,23 @@
 const divisionstbody = document.querySelector('.divisionstbody');
 const addpostform = document.querySelector('.add-post-form');
 const divisioninp = document.getElementById('divisioninp');
+// const del = document.getElementById('del');
 
 let output = '';
 let url = 'http://localhost/stgapi/division'
 
-// read
 const renderPosts = (posts) => {
     console.log(posts);
     posts.forEach(datar => {
         output +=
 
             `<tr data-id="${datar.id}">
-        <td class="odd" contenteditable="true"  >${datar.designiation}</td>
-        <td class="odd">
-        <a class="" id="delete-row">delete</a>
-        <a class="edit" id="edit-row" data-toggle="modal"><i  class="fas fas fa-save fa-1x ml-3"></i></a>
-        </td>
-        </tr>`
+                <td  class="odd" id="savee" contenteditable="true">${datar.designiation}</td>
+                <td class="odd">
+                    <button class="btn btn-danger" type="submit" id="delete-row">delete</button>
+                    <button class="btn btn-success" type="submit" id="edit-row">save</button>
+                </td>
+            </tr>`
 
     });
     divisionstbody.innerHTML = output;
@@ -33,7 +33,7 @@ addpostform.addEventListener('submit', (e) => {
     e.preventDefault();
     console.log("clicked");
 
-    fetch(url, {
+    fetch(url + "/add", {
             method: 'POST',
             header: {
                 'Content-Type': 'application/json'
@@ -51,6 +51,7 @@ addpostform.addEventListener('submit', (e) => {
         .then(() => location.reload());
 })
 
+
 // delete divesion
 
 divisionstbody.addEventListener('click', (e) => {
@@ -61,22 +62,46 @@ divisionstbody.addEventListener('click', (e) => {
 
     let id = e.target.parentElement.parentElement.dataset.id;
     if (delBtnIsPressed) {
-        console.log("eeee");
-        const myDataObject = { id: id }
-        fetch(url, {
-                method: 'DELETE',
-                headers: {
+        fetch(url + "/delete/" + id, {
+
+            method: 'POST',
+            headers: {
+
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(() => location.reload());
+    }
+});
+
+// update
+
+divisionstbody.addEventListener('click', (e) => {
+    e.preventDefault();
+    let editBtnIsPressed = e.target.id == "edit-row";
+
+    let id = e.target.parentElement.parentElement.dataset.id;
+    let valuee = e.target.parentElement.parentElement.firstElementChild.innerText;
+    // console.log(valuee);
+    if (editBtnIsPressed) {
+        // console.log(valuee);
+        // console.log("updated");
+        fetch(url + "/Update/" + id, {
+                method: 'POST',
+                header: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(myDataObject)
+                body: JSON.stringify({
+                    designiation: valuee,
+                })
             })
-            .then(response => {
-                return response.json()
+            .then(res => res.json())
+            .then(data => {
+                const dataArr = [];
+                dataArr.push(data);
+                renderPosts(dataArr);
             })
-            .then(data =>
-                // this is the data we get after doing the delete request, do whatever you want with this data
-                console.log(data)
-            );
+            .then(() => location.reload());
     }
 
 })
