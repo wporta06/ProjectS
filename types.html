@@ -66,13 +66,13 @@
             <table class="table">
                 <tbody>
                     <tr>
-                        <th>Type</th>
                         <th>Catégorie</th>
+                        <th>Type</th>
 
                         <th>Action</th>
                     </tr>
                 </tbody>
-                <tbody id="xxx" class="typetbody">
+                <tbody id="xxx" class="divisionstbody">
 
 
                     <!-- api here -->
@@ -93,22 +93,21 @@
           </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form class="add-post-form">
 
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Catégorie:</label>
-                            <select style="width: 23em;margin-left: 2.4em;" class="css-input forlab2" id="" name="">
-                                <option value="neuf">Catégorie1</option>
-                                <option value="bon">Catégorie2</option>
+                            <select style="width: 23em;margin-left: 2.4em;" class="css-input forlab2" id="locality-dropdown" name="locality">
+                               <!-- api -->
                             </select>
                             <label class="">Type:</label>
-                            <input style="width: 23em;margin-left: 4.8em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 23em;margin-left: 4.8em;" class="css-input forlab2" required id="service"></input>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                                <button type="submit" class="btn btn-primary">Ajouter</button>
+                            </div>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </div>

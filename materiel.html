@@ -83,7 +83,7 @@
                         <th class="bg-secondary text-white" d scope="col"></th>
                     </tr>
                 </thead>
-                <tbody class="materieltbody">
+                <tbody class="divisionstbody">
                     API here
 
 
@@ -104,20 +104,22 @@
               </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                        <div style="display: flex; margin-left: 40px; margin-top: 11px;" class="form-group">
+                    <form class="add-post-form">
+                        <div style="display: flex; margin-left: 16px; margin-top: 11px;" class="form-group">
                             <label class="forlab col-form-label">Catégorie:</label>
-                            <select class="forinp css-input" id="" name="">
+                            <select class="forinp css-input" id="locality-dropdown" name="">
+                                <!-- api -->
                                 <option value="volvo">Volvo</option>
                                 <option value="saab">Saab</option>
                             </select>
+
                             <label style="right: 33px;" class="forlab col-form-label">Type:</label>
-                            <select class="forinp css-input" id="" name="">
-                                <option value="volvo">Volvo</option>
-                                <option value="saab">Saab</option>
+                            <select class="forinp css-input" id="locality-dropdowntype" name="">
+                               <!-- api in Catégorie api when select -->
                             </select>
                             <label style="right: 13px;" class="forlab col-form-label">Marque:</label>
-                            <select class="forinp css-input" id="" name="">
+                            <select class="forinp css-input" id="locality-dropdownmarque" name="">
+                                <!-- api -->
                                 <option value="volvo">Volvo</option>
                                 <option value="saab">Saab</option>
                             </select>
@@ -125,15 +127,15 @@
                         </div>
                         <div style="margin-left: 35px;" class="form-group">
                             <label class="">Modéle:</label>
-                            <input style="width: 28em;margin-left: 5em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28em;margin-left: 5em;" class="css-input forlab2" required id="modeleinput"></input>
                             <label class="">N° Série:</label>
-                            <input style="width: 28em;margin-left: 5em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28em;margin-left: 5em;" class="css-input forlab2" id="nserieinput"></input>
                             <label class="">Acquisition:</label>
-                            <input style="width: 28em;margin-left: 3.4em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28em;margin-left: 3.4em;" class="css-input forlab2" id="acquinput"></input>
                             <label class="">N° Acquisition:</label>
-                            <input style="width: 27.2em;margin-left: 2.2em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 27.2em;margin-left: 2.2em;" class="css-input forlab2" id="nacquinput"></input>
                             <label class="col-form-label">Etat:</label>
-                            <select style="width: 28em;margin-left: 7em;" class="css-input forlab2" id="" name="">
+                            <select style="width: 28em;margin-left: 7em;" class="css-input forlab2" id="etatinput" name="">
                                 <option value="neuf">Neuf</option>
                                 <option value="bon">Bon</option>
                                 <option value="moyen">Moyen</option>
@@ -141,15 +143,15 @@
                                 <option value="panne">Panne</option>
                             </select>
                             <label class="col-form-label">instock:</label>
-                            <input style="width: 28em;margin-left: 5.3em;" class="css-input forlab2" id=""></input>
+                            <input style="width: 28em;margin-left: 5.3em;" type="number" class="css-input forlab2" id="instockinput"></input>
                             <label class="">Note:</label>
-                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id=""></textarea>
+                            <textarea class="css-input forlab2" style="width: 34em;margin-left: 3em;" id="noteinput"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
+                            <button type="submit" class="btn btn-primary">Ajouter</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary te" data-dismiss="modal">Annuler</button>
-                    <button type="button" class="btn btn-primary">Ajouter</button>
                 </div>
             </div>
         </div>

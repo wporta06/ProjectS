@@ -40,6 +40,10 @@
     cursor: pointer;
 }
 
+#borderr {
+    border-radius: 7px;
+}
+
 #search {
     border-radius: 4px;
     border: solid 1px blue;
