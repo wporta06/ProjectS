@@ -23,20 +23,36 @@ let url = 'http://localhost/stgapi/materiel'
 const renderPosts = (posts) => {
     console.log(posts);
     posts.forEach(datar => {
-        output +=
 
-            ` <tr data-id="${datar.id}">
+        // show categorue name using the id
+        fetch("http://localhost/stgapi/categorie")
+            .then(res => res.json())
+            .then(data => {
+                data.forEach(datar1 => {
 
-            <td class="border" >${datar.categorie}</td>
-            <td class="border" >${datar.id_type}</td>
-            <td class="border" >${datar.id_marque}</td>
+                    // show type name using the id
+                    fetch("http://localhost/stgapi/type")
+                        .then(res => res.json())
+                        .then(data => {
+                            data.forEach(datar2 => {
+                                // show type name using the id
+                                fetch("http://localhost/stgapi/marque")
+                                    .then(res => res.json())
+                                    .then(data => {
+                                        data.forEach(datar3 => {
+                                            if (datar.categorie == datar1.id) {
+                                                output += ` <tr data-id="${datar.id}">
+
+            <td class="border bg-light" >${datar1.categorie}</td>
+            <td class="border bg-light" >${datar2.designiation}</td>
+            <td class="border bg-light" >${datar3.marque}</td>
             <td class="border" contenteditable="true" >${datar.model}</td>
             <td class="border" contenteditable="true" >${datar.nserie}</td>
             <td class="border" contenteditable="true" >${datar.acquisition}</td>
             <td class="border" contenteditable="true" >${datar.nacquisition}</td>
             <td class="border" >
                 <select id="borderr" value="${datar.etat}">
-                    <option >${datar.etat}</option>
+                    <option hidden >${datar.etat}</option>
                     <option value="neuf">neuf</option>
                     <option value="bon">Bon</option>
                     <option value="moyen">Moyen</option>
@@ -50,8 +66,15 @@ const renderPosts = (posts) => {
 
         </tr>`
 
-    });
-    divisionstbody.innerHTML = output;
+                                            }
+                                        });
+                                        divisionstbody.innerHTML = output;
+                                    })
+                            })
+                        })
+                })
+            })
+    })
 }
 
 fetch(url)
@@ -74,7 +97,7 @@ const renderDrop = (data) => {
     dropdown.add(defaultOption);
     dropdown.selectedIndex = 0;
 
-    console.log(data);
+    // console.log(data);
     let option;
     for (let i = 0; i < data.length; i++) {
         option = document.createElement('option');
@@ -103,7 +126,7 @@ const renderDrop = (data) => {
             dropdowntype.add(defaultOption);
             dropdowntype.selectedIndex = 0;
 
-            console.log(data);
+            // console.log(data);
             let option;
             for (let i = 0; i < data.length; i++) {
                 // console.log("object");

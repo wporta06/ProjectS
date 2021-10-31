@@ -14,19 +14,31 @@ let url = 'http://localhost/stgapi/service'
 const renderPosts = (posts) => {
     console.log(posts);
     posts.forEach(datar => {
-        output +=
+        // show divition name using the id
+        fetch("http://localhost/stgapi/division")
+            .then(res => res.json())
+            .then(data => {
 
-            `<tr data-id="${datar.id}">
-                <td  class="odd">${datar.id_division}</td>
-                <td  class="odd" id="savee" contenteditable="true">${datar.designiation}</td>
-                <td class="odd">
-                    <button class="btn btn-danger" type="submit" id="delete-row">delete</button>
-                    <button class="btn btn-success" type="submit" id="edit-row">save</button>
-                </td>
-            </tr>`
+                data.forEach(datar1 => {
+                    if (datar.id_division == datar1.id) {
 
-    });
-    divisionstbody.innerHTML = output;
+                        output +=
+
+                            `<tr data-id="${datar.id}">
+                        <td  class="odd bg-light">${datar1.designiation}</td>
+                        <td  class="odd" id="savee" contenteditable="true">${datar.designiation}</td>
+                        <td class="odd">
+                            <button class="btn btn-danger" type="submit" id="delete-row">delete</button>
+                            <button class="btn btn-success" type="submit" id="edit-row">save</button>
+                        </td>
+                    </tr>`
+
+
+                    }
+                });
+                divisionstbody.innerHTML = output;
+            })
+    })
 }
 
 fetch(url)
