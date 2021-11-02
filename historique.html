@@ -62,23 +62,24 @@
         </nav>
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5 pt-5">
-            <h2 class="mb-4">les affectations</h2>
-            <label>Recherche Libre:</label>
+            <h2 class="mb-4">Historique</h2>
+            <!-- <label>Recherche Libre:</label>
             <input type="search" id="search" name="search">
             <label>Recherche Avancée:</label>
             <input type="search" id="search" name="search">
-            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Ajouter</button>
+            <button class="btn btnnn float-right mb-4 text-white" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus"></i> Ajouter</button> -->
 
             <table class="table table-hover ">
                 <thead class="">
                     <tr>
 
                         <th class="bg-light" scope="col">Nom et Prénom</th>
-                        <th class="" scope="col">N° Série</th>
+                        <th class="bg-light" scope="col">Matériel</th>
+
                         <th class="" scope="col">Date Affectation</th>
                         <th class="" scope="col">Date fin Affectation</th>
-                        <th class="" scope="col">Notes <i class="fas fa-clipboard"></i></th>
-                        <th class="bg-secondary" d scope="col"></th>
+
+                        <!-- <th class="bg-secondary" d scope="col"></th> -->
                     </tr>
                 </thead>
                 <tbody class="affectbody">
@@ -91,7 +92,7 @@
 
 
     <!-- popup -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="width: 43em; border-radius: 20px;">
                 <div class="modal-header">
@@ -150,9 +151,9 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--  fin Affectation popup -->
-    <div class="modal fade" id="affectationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="affectationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="width: 55em; border-radius: 20px;">
                 <div class="modal-header">
@@ -167,7 +168,9 @@
                         <div style="margin-left: 35px;" class="form-group">
 
 
-                            <!-- api -->
+
+                            <label class="">Date De Fin Affectation:</label>
+                            <input type="date" class="css-input" id=""></input>
                         </div>
                     </form>
                 </div>
@@ -177,10 +180,10 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- ============== -->
-    <script src="js/fetch/affecfetch.js"></script>
+    <script src="js/fetch/historiquefetch.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>

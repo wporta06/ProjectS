@@ -17,7 +17,7 @@ fetch("http://localhost/apitraversy/api/post/read.php")
                 <td class="border text-primary edit">${datar.id} <i class="fas fa-search"></i></td>
                 <td class="border">${datar.category_name}</td>
                 <td class="border">${datar.category_name}</td>
-                <td class="border">${datar.title}</td>
+                <td class="border">${datar.category_name}</td>
                
 
             </tr>`
